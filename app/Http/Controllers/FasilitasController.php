@@ -11,8 +11,10 @@ class FasilitasController extends Controller
         return view('home');
     }
 
-    public function facility(){
+    // Halaman Facility
+    public function facility()
+    {
         $fasilitas = Fasilitas::all();
-        return view('facility');
+        return view('facility', ['fasilitas' => $fasilitas]);
     }
 }
