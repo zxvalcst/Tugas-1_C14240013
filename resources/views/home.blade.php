@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- hero image-->
-    <div class="w-full h-[500px] overflow-hidden relative">
+    <div class="w-full h-[600px] overflow-hidden relative">
         <img 
             src="{{ asset('assets/home.jpg') }}" 
             alt="Universitas Kristen Petra"

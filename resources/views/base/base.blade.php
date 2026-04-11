@@ -12,6 +12,22 @@
         h1, h2, h3 { font-family: 'Verdana', serif; }
     </style>
 </head>
+{{-- Auto dismiss alert setelah 3 detik --}}
+<script>
+    // Cari semua elemen dengan id yang mengandung 'alert'
+    setTimeout(function() {
+        const alerts = document.querySelectorAll('[id^="alert-"]');
+        alerts.forEach(function(alert) {
+            // Fade out perlahan
+            alert.style.transition = 'opacity 0.5s ease';
+            alert.style.opacity = '0';
+            // Hapus dari DOM setelah animasi selesai
+            setTimeout(function() {
+                alert.style.display = 'none';
+            }, 500);
+        });
+    }, 3000); // 3000ms = 3 detik
+</script>
 <body class="bg-white text-gray-800">
     <!-- navbar -->
     <nav class="sticky top-0 z-50 bg-white shadow-md">
